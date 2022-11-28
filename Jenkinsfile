@@ -68,7 +68,9 @@ pipeline{
             }
         }
         stage('----print-----'){
-            bat "echo " + params.UREBAL_VERSION
+           steps{
+                bat "echo " + params.UREBAL_VERSION
+           }
         }
         stage('----clean----'){
             steps{
