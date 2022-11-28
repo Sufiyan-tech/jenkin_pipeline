@@ -11,7 +11,7 @@ pipeline{
         )
     }
     environment{
-        PATH = "C:\\Windows\\System32;"
+        PATH = "C:\\Windows\\System32"
     }
     tools{
         maven 'apache-maven-3.8.6'
