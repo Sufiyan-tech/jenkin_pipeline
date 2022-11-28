@@ -1,5 +1,15 @@
 pipeline{
     agent any 
+    options{
+        buildDiscarder(
+            logRotator(
+                numToKeepStr:'5',
+                daysToKeepStr:'5',
+                artifactDaysToKeepStr:'5',
+                artifactNumToKeepStr:5   
+            )
+        )
+    }
     environment{
         PATH = "C:\\Windows\\System32;C:\\Users\\muhammad.sufiyan\\AppData\\Local\\Programs\\Git\\bin"
     }
