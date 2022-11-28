@@ -49,9 +49,8 @@ pipeline{
                                 trim:false
                             ),
                             password(
-                                defaultValue:'integration_testing',
                                 name:'DatabasePassword',
-                                description:'Password for configured schema user',
+                                description:'integration_testing',
                             ),
                             string(
                                 defaultValue:'192.168.2.45/ORCL',
