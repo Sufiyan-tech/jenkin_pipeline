@@ -69,7 +69,12 @@ pipeline{
         }
         stage('----print-----'){
            steps{
-                bat "echo " + params.UREBAL_VERSION
+                bat "echo UREBAL_VERSION : " + params.UREBAL_VERSION
+                bat "echo UR_BUILD_VERSION : " + params.UR_BUILD_VERSION
+                bat "echo DatabaseName : " + params.DatabaseName
+                bat "echo DatabasePassword : " + params.DatabasePassword
+                bat "echo DatabaseServer : " + params.DatabaseServer
+                bat "echo FRONTEND : " + params.FRONTEND
            }
         }
         stage('----clean----'){
