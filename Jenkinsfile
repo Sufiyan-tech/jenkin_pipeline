@@ -19,6 +19,22 @@ pipeline{
         git 'git-latest'
     }
     stages{
+        stage('----parameters----'){
+            steps{
+                script{
+                    properties([
+                        parameters([
+                            string(
+                                defaultValue:'Blueleaf',
+                                name:'frontend',
+                                description:'n/a',
+                                trim:true
+                            )
+                        ])
+                    ])
+                }
+            }
+        }
         stage('----clean----'){
             steps{
                
