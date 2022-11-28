@@ -11,11 +11,12 @@ pipeline{
         )
     }
     environment{
-        PATH = "C:\\Windows\\System32;C:\\Users\\muhammad.sufiyan\\AppData\\Local\\Programs\\Git\\bin"
+        PATH = "C:\\Windows\\System32;"
     }
     tools{
         maven 'apache-maven-3.8.6'
         jdk 'Java-JDK'
+        git 'git-latest'
     }
     stages{
         stage('----clean----'){
