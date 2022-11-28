@@ -11,7 +11,7 @@ pipeline{
         )
     }
     environment{
-        PATH = "C:\\Windows\\System32;C:\\Users\\muhammad.sufiyan\\AppData\\Local\\Programs\\Git\\bin"
+        PATH = "C:\\Windows\\System32;C:\\Users\\muhammad.sufiyan\\AppData\\Local\\Programs\\Git\\bin;C:\\Users\\muhammad.sufiyan\\AppData\\Local\\Programs\\Git\\cmd"
     }
     tools{
         maven 'apache-maven-3.8.6'
