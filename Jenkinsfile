@@ -25,10 +25,43 @@ pipeline{
                     properties([
                         parameters([
                             string(
-                                defaultValue:'Blueleaf',
-                                name:'frontend',
-                                description:'n/a',
-                                trim:true
+                                defaultValue:'1.0.73',
+                                name:'UREBAL_VERSION',
+                                description:'UREBAL project version, defaults to 1.0.0',
+                                trim:false
+                            ),
+                            string(
+                                defaultValue:'.1',
+                                name:'UR_BUILD_VERSION',
+                                description:'Build version for Job',
+                                trim:false
+                            ),
+                            string(
+                                defaultValue:'integration_testing',
+                                name:'DatabaseName',
+                                description:'Name of configured oracle schema user',
+                                trim:false
+                            ),
+                            string(
+                                defaultValue:'integration_testing',
+                                name:'DatabaseName',
+                                description:'Name of configured oracle schema user',
+                                trim:false
+                            ),
+                            password(
+                                defaultValue:'integration_testing',
+                                name:'DatabasePassword',
+                                description:'Password for configured schema user',
+                            ),
+                            string(
+                                defaultValue:'192.168.2.45/ORCL',
+                                name:'DatabaseServer',
+                                description:'Hostname and service name for configured schema',
+                                trim:false
+                            ),
+                            choice(
+                                choices:['BLUELEAF' , 'PROD-V2'],
+                                name:'FRONTEND'
                             )
                         ])
                     ])
