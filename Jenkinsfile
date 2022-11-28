@@ -6,7 +6,7 @@ pipeline{
                 numToKeepStr:'5',
                 daysToKeepStr:'5',
                 artifactDaysToKeepStr:'5',
-                artifactNumToKeepStr:5   
+                artifactNumToKeepStr:'5'   
             )
         )
     }
