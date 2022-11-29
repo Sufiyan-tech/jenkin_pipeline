@@ -1,4 +1,3 @@
-@Library("shared-library") _
 pipeline{
     agent any 
     options{
@@ -77,11 +76,6 @@ pipeline{
                 bat "echo DatabaseServer : " + params.DatabaseServer
                 bat "echo FRONTEND : " + params.FRONTEND
            }
-        }
-        stage('----DB Scripts----'){
-            steps{
-                DBSetting()
-            }
         }
         stage('----clean----'){
             steps{
