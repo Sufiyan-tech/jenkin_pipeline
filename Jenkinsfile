@@ -1,3 +1,4 @@
+@Library("shared-library")
 pipeline{
     agent any 
     options{
@@ -79,8 +80,7 @@ pipeline{
         }
         stage('----DB Scripts----'){
             steps{
-                def command = ["cd C:\\URebal\\UR-PRO-Backend\\src\\DB Scripts\\Blueleaf && set PGPASSWORD=UR_DEV&& psql -h 192.168.2.51 -d check-db -U UR_DEV -f CreateFirm.sql", "Some text"];
-                command.execute();
+                DBSetting()
             }
         }
         stage('----clean----'){
