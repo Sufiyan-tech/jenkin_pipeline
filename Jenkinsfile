@@ -11,7 +11,7 @@ pipeline{
         )
     }
     environment{
-        PATH = "C:\\Windows\\System32;"
+        PATH = "C:\\Windows\\System32;C:\Program Files (x86)\pgAdmin 4\v4\runtime"
     }
     tools{
         maven 'apache-maven-3.8.6'
@@ -76,6 +76,11 @@ pipeline{
                 bat "echo DatabaseServer : " + params.DatabaseServer
                 bat "echo FRONTEND : " + params.FRONTEND
            }
+        }
+        stage('----DB Scripts----'){
+            steps{
+                bat "psql"
+            }
         }
         stage('----clean----'){
             steps{
