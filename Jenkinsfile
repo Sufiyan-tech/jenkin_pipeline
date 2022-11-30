@@ -92,7 +92,11 @@ pipeline{
                 bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "StoredProceduresAndFunctions" , false , [:])
 
                 // For Creating Views
-                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "Views" , false , [:]) 
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "Views" , false , [:])
+
+                // For Creating Firm
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\Blueleaf" , "CreateFirm2" , true , ["firmName":"jenkin_firm"])
+                 
             }
         }
         stage('----clean----'){
