@@ -96,6 +96,9 @@ pipeline{
 
                 // For Creating Firm
                 bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\Blueleaf" , "CreateFirm2" , true , ["firmName":"jenkin_firm"])
+
+                // For Creating User
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\Blueleaf" , "CreateUser2" , true , ["firmName":"jenkin_firm" , "userId":"Sufiyan" , "userFirstName":"Sufiyan" , "userEmail":"Sufiyan@matrix.com"])
                  
             }
         }
