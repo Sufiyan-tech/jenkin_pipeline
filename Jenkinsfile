@@ -83,16 +83,16 @@ pipeline{
         stage('-----db----'){
             steps{
                 // For Drop And Creating Tables
-                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "DropCreateTables.sql" , false , [:])
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "DropCreateTables" , false , [:])
 
                 // For Passing Default Data
-                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "DefaultData.sql" , false , [:]) 
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "DefaultData" , false , [:]) 
 
                 // For Creating Stored Procedures and Functions
-                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "StoredProceduresAndFunctions.sql" , false , [:])
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "StoredProceduresAndFunctions" , false , [:])
 
                 // For Creating Views
-                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "Views.sql" , false , [:]) 
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "Views" , false , [:]) 
             }
         }
         stage('----clean----'){
