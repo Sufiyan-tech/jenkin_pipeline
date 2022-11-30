@@ -82,7 +82,7 @@ pipeline{
         }
         stage('-----db----'){
             steps{
-                bat dbSettings("C:\\URebal\\UR-PRO-Backend" , "check-db" , "f.sql" , false , [:]) 
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete\\DropCreateTables.sql" , false , [:]) 
             }
         }
         stage('----clean----'){
