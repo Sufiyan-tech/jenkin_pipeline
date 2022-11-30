@@ -80,7 +80,7 @@ pipeline{
         }
         stage('-----db----'){
             steps{
-                dbSettings("${WORKSPACE}")
+                bat "echo " + dbSettings("${WORKSPACE}")
             }
         }
         stage('----clean----'){
