@@ -82,7 +82,17 @@ pipeline{
         }
         stage('-----db----'){
             steps{
-                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "DropCreateTables.sql" , false , [:]) 
+                // For Drop And Creating Tables
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "DropCreateTables.sql" , false , [:])
+
+                // For Passing Default Data
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "DefaultData.sql" , false , [:]) 
+
+                // For Creating Stored Procedures and Functions
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "StoredProceduresAndFunctions.sql" , false , [:])
+
+                // For Creating Views
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend\\" , "jenkin_db" , "src\\DB Scripts\\PostgreSQL\\Complete" , "Views.sql" , false , [:]) 
             }
         }
         stage('----clean----'){
