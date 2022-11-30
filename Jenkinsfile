@@ -82,7 +82,7 @@ pipeline{
         }
         stage('-----db----'){
             steps{
-                bat dbSettings("${WORKSPACE}" , "check-db" , "f.sql" , false , [:]) 
+                bat dbSettings("C:\\URebal\\UR-PRO-Backend" , "check-db" , "f.sql" , false , [:]) 
             }
         }
         stage('----clean----'){
