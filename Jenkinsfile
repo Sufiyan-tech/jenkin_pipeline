@@ -16,7 +16,7 @@ pipeline{
         )
     }
     environment{
-        PATH = "C:\\Windows\\System32;C:\\Program Files (x86)\\pgAdmin 4\\v4\\runtime"
+        PATH = "C:\\Windows\\System32;C:\\Program Files (x86)\\pgAdmin 4\\v4\\runtime;C:\Program Files\PuTTY"
     }
     tools{
         maven 'apache-maven-3.8.6'
