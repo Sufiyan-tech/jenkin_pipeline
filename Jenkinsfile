@@ -102,6 +102,11 @@ pipeline{
                  
             }
         }
+        stage('----remote-----'){
+            steps{
+                bat "plink 192.168.56.101 -l muser -pw matrix"
+            }
+        }
         stage('----clean----'){
             steps{
                
