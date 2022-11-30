@@ -2,7 +2,9 @@
 
 @Library("shared-library") _
 pipeline{
-    agent any 
+    agent {
+        label 'default_node'
+    } 
     options{
         buildDiscarder(
             logRotator(
