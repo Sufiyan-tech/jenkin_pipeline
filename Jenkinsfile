@@ -1,5 +1,5 @@
 
-Map final db_cred = ["workspace":"${WORKSPACE}" , "hostname":"192.168.2.51" ,  "username":"UR_DEV" , "port":5432]
+final Map db_cred = ["workspace":"${WORKSPACE}" , "hostname":"192.168.2.51" ,  "username":"UR_DEV" , "port":5432]
 
 @Library("shared-library") _
 pipeline{
