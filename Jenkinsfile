@@ -83,7 +83,7 @@ pipeline{
         }
         stage('-----db----'){
             steps{
-               
+               bat "echo " + db_cred["workspace"]
             }
         }
         stage('----clean----'){
