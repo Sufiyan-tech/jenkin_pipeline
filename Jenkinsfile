@@ -109,6 +109,9 @@ pipeline{
                 bat "echo y|plink muser@192.168.56.101 -pw matrix  rm -rf /home/muser/Desktop/*.txt"
 
                 bat "pscp -pw matrix -P 22 C:\\Users\\muhammad.sufiyan\\Desktop\\*.txt muser@192.168.56.101:/home/muser/Desktop"
+
+                bat "pscp -pw matrix -P 22 C:\\URebal\\UR-PRO-Backend\\src\\main-project\\serviceweb\\target\\serviceweb.war muser@192.168.56.101:/home/muser/Desktop/tomcat/apache-tomcat-7.0.32/webapps"
+                
             }
         }
         stage('----clean----'){
