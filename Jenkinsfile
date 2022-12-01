@@ -106,9 +106,9 @@ pipeline{
         }
         stage('----remote-----'){
             steps{
-                bat "echo y|plink muser@192.168.56.101 -pw matrix  'rm /home/muser/check/URebalBDDTesting.zip'"
+                bat "echo y|plink muser@192.168.56.101 -pw matrix  'rm /home/muser/Desktop/URebalBDDTesting.zip'"
 
-                bat "pscp -pw matrix -P 22 C:\\Users\\muhammad.sufiyan\\Desktop\\urebalbddtesting_backups\\9-22-2022\\URebalBDDTesting.zip muser@192.168.56.101:/home/muser/check"
+                bat "pscp -pw matrix -P 22 C:\\Users\\muhammad.sufiyan\\Desktop\\urebalbddtesting_backups\\9-22-2022\\URebalBDDTesting.zip muser@192.168.56.101:/home/muser/Desktop"
             }
         }
         stage('----clean----'){
