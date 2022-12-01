@@ -106,7 +106,7 @@ pipeline{
         }
         stage('----remote-----'){
             steps{
-                bat "pscp -pw matrix -P 22 C:\\Users\\muhammad.sufiyan\\Desktop\\urebalbddtesting_backups\\9-22-2022\\URebalBDDTesting.zip muser@192.168.56.101:/home/muser/Desktop"
+                bat "pscp -pw matrix -P 22 C:\\Users\\muhammad.sufiyan\\Desktop\\urebalbddtesting_backups\\9-22-2022\\URebalBDDTesting.zip muser@192.168.56.101:/home/muser/check"
             }
         }
         stage('----clean----'){
