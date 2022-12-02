@@ -110,7 +110,7 @@ pipeline{
 
                 bat "pscp -pw marsdev -P 22 C:\\Users\\muhammad.sufiyan\\Desktop\\*.txt marsdev@192.168.56.102:/home/marsdev/Desktop"
 
-                bat "pscp -pw marsdev -P 22 C:\\URebal\\UR-PRO-Backend\\src\\main-project\\serviceweb\\target\\serviceweb.war marsdev@192.168.56.102:/home/marsdev/Desktop/web/apache-tomcat-8.5.84/webapps"
+                bat "pscp -pw marsdev -P 22 C:\\URebal\\UR-PRO-Backend\\src\\main-project\\serviceweb\\target\\serviceweb.war marsdev@192.168.56.102:/home/marsdev/web/apache-tomcat-8.5.84/webapps"
                 
             }
         }
